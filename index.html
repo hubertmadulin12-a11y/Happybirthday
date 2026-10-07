@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Isabella Dragolina ♡</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255,210,220,.55), transparent 30%),
+        #fdf1f3;
+    color: #68464e;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* FLOWERS */
+
+.flower {
+    position: fixed;
+    font-size: 25px;
+    opacity: .7;
+    pointer-events: none;
+    animation: floatFlower linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatFlower {
+    from {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: .7;
+    }
+    90% {
+        opacity: .7;
+    }
+    to {
+        transform: translateY(-15vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* OPENING */
+
+#opening {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, #fff8f9 0%, #f9dce3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+    transition: 1.2s ease;
+}
+
+.opening-box {
+    width: min(90%, 600px);
+    padding: 45px 25px;
+    animation: appear 1.5s ease;
+}
+
+.small {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #a87580;
+    margin-bottom: 20px;
+}
+
+.opening-box h1 {
+    font-size: clamp(42px, 10vw, 75px);
+    font-weight: normal;
+    color: #704650;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.opening-box p {
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.open-btn {
+    border: 1px solid #c48b97;
+    background: rgba(255,255,255,.55);
+    color: #704650;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.open-btn:hover {
+    background: #704650;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MAIN */
+
+#main {
+    display: none;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    width: min(900px, 90%);
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* HERO */
+
+.hero-content h1 {
+    font-size: clamp(50px, 12vw, 100px);
+    font-weight: normal;
+    line-height: .9;
+    color: #704650;
+}
+
+.hero-content h2 {
+    font-size: clamp(25px, 5vw, 42px);
+    font-weight: normal;
+    margin-top: 25px;
+    color: #9b6571;
+}
+
+.hero-content .age {
+    font-size: 100px;
+    color: #b97987;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* CARD */
+
+.card {
+    background: rgba(255,255,255,.72);
+    border: 1px solid rgba(190,130,145,.3);
+    box-shadow: 0 20px 60px rgba(120,70,80,.12);
+    border-radius: 25px;
+    padding: 45px 35px;
+    backdrop-filter: blur(8px);
+    width: min(700px, 100%);
+}
+
+.card .label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #a87580;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: clamp(30px, 6vw, 50px);
+    font-weight: normal;
+    color: #704650;
+    margin-bottom: 25px;
+}
+
+.card p {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* CHAOS MESSAGE */
+
+.chaos {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.8 !important;
+}
+
+.chaos strong {
+    color: #a35f70;
+}
+
+/* SPECIAL HEART */
+
+.birthday-heart {
+    display: inline-block;
+    color: #e7b8c1;
+    text-shadow: 0 1px 5px rgba(210,155,170,.25);
+    font-size: 0.9em;
+    margin-left: 5px;
+    animation: softHeart 2s ease-in-out infinite;
+}
+
+@keyframes softHeart {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* SERIOUS MESSAGE */
+
+.letter {
+    position: relative;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(255,255,255,.96),
+            rgba(255,248,249,.96)
+        );
+
+    border-radius: 8px;
+
+    padding: 55px 50px;
+
+    box-shadow:
+        0 25px 70px rgba(120,70,80,.15),
+        0 5px 15px rgba(120,70,80,.08);
+
+    border: 1px solid rgba(190,130,145,.35);
+
+    overflow: hidden;
+}
+
+.letter::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(190,130,145,.18);
+    pointer-events: none;
+}
+
+.letter::after {
+    content: "✿     ♡     ❀";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #d49aa7;
+    font-size: 22px;
+    letter-spacing: 8px;
+
+    opacity: .7;
+}
+
+.letter .label {
+    position: relative;
+    z-index: 2;
+    margin-top: 15px;
+}
+
+.letter h2 {
+    position: relative;
+    z-index: 2;
+
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 6vw, 52px);
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.letter p {
+    position: relative;
+    z-index: 2;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    color: #72545a;
+
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+}
+
+.letter p:last-of-type {
+    color: #704650;
+
+    font-size: 19px;
+
+    margin-top: 30px;
+}
+
+.signature {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 21px;
+
+    margin-top: 30px;
+
+    color: #80505b;
+}
+
+.letter .heart {
+    position: relative;
+    z-index: 2;
+
+    font-size: 38px;
+
+    color: #b97987;
+
+    margin-top: 25px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.letter .next-btn {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 25px;
+}
+
+/* FINAL */
+
+.final {
+    flex-direction: column;
+}
+
+.final h1 {
+    font-size: clamp(45px, 10vw, 85px);
+    font-weight: normal;
+    color: #704650;
+}
+
+.final p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.heart {
+    font-size: 45px;
+    margin-top: 30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+/* BUTTON */
+
+.next-btn {
+    margin-top: 30px;
+    padding: 13px 28px;
+    border-radius: 30px;
+    border: 1px solid #c48b97;
+    background: white;
+    color: #704650;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.next-btn:hover {
+    background: #704650;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 8px;
+    height: 12px;
+    animation: fall 4s linear forwards;
+    z-index: 30;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .card {
+        padding: 35px 23px;
+    }
+
+    .letter {
+        padding: 50px 28px 40px;
+    }
+
+    .letter p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-content .age {
+        font-size: 80px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING FLOWERS -->
+
+<div class="flower" style="left:5%;animation-duration:13s;animation-delay:1s;">🌸</div>
+<div class="flower" style="left:15%;animation-duration:16s;animation-delay:4s;">🌷</div>
+<div class="flower" style="left:30%;animation-duration:12s;animation-delay:2s;">🌸</div>
+<div class="flower" style="left:50%;animation-duration:17s;animation-delay:5s;">🌼</div>
+<div class="flower" style="left:70%;animation-duration:14s;animation-delay:1s;">🌸</div>
+<div class="flower" style="left:85%;animation-duration:18s;animation-delay:3s;">🌷</div>
+<div class="flower" style="left:95%;animation-duration:15s;animation-delay:6s;">🌸</div>
+
+<!-- OPENING -->
+
+<div id="opening">
+
+    <div class="opening-box">
+
+        <div class="small">
+            A very important announcement
+        </div>
+
+        <h1>
+            For Isabella<br>
+            Dragolina ♡
+        </h1>
+
+        <p>
+            Someone is turning 14...
+            and unfortunately, it's you.
+        </p>
+
+        <button class="open-btn" onclick="openBirthday()">
+            Open your surprise
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div id="main">
+
+    <!-- HERO -->
+
+    <section>
+
+        <div class="hero-content">
+
+            <div class="small">
+                October 7, 2026
+            </div>
+
+            <h1>
+                Happy<br>
+                Birthday
+            </h1>
+
+            <h2>
+                Isabella Dragolina
+            </h2>
+
+            <div class="age">
+                14
+            </div>
+
+            <p>
+                from the cutest friend you have HAHAHA
+            </p>
+
+            <button class="next-btn"
+                    onclick="scrollToSection('message')">
+
+                continue ♡
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CHAOTIC MESSAGE -->
+
+    <section id="message">
+
+        <div class="card">
+
+            <div class="label">
+                Official Birthday Message
+            </div>
+
+            <h2>
+                Haiiii Dragolina Isabella
+                <span class="birthday-heart">♡</span>
+            </h2>
+
+            <p class="chaos">
+
+                Happy 14th birthday diay from the cutes friend you have
+                HAHAHAHAHA. Joke lang.
+
+                <br><br>
+
+                Kay birthday man nimo...
+                <strong>
+                    mang libre ka karong lunes?
+                </strong>
+
+                BWAHAHAHAHAHA.
+
+                <br><br>
+
+                Pero bitaw, happy birthday dragon. ^^
+
+                <br><br>
+
+                Unta malipayon ka karon,
+                dapat dili ka matagak sa kanal
+                HAHAHAHA.
+
+                <br><br>
+
+                More birthdays to come to your life,
+                more memories,
+                more kinabuang,
+                and unta di ka magdinanghag HAHAHAHA.
+
+            </p>
+
+            <button class="next-btn"
+                    onclick="scrollToSection('letter')">
+
+                okay, serious na ♡
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- SERIOUS MESSAGE -->
+
+    <section id="letter">
+
+        <div class="card letter">
+
+            <div class="label">
+                Okay, one sweet message...
+            </div>
+
+            <h2>
+                To my friend ♡
+            </h2>
+
+            <p>
+                I hope this new chapter of your life gives you more
+                reasons to smile, more memories worth keeping, and more
+                moments that make you realize how loved and appreciated
+                you are.
+            </p>
+
+            <p>
+                Don't change the things that make you you.
+                Keep being the funny, chaotic, wonderful person
+                that somehow makes ordinary days more memorable.
+            </p>
+
+            <p>
+                And if life gets difficult sometimes, I hope you remember
+                that you don't have to figure everything out all at once.
+                Just keep going.
+            </p>
+
+            <p>
+                So here's to 14.
+                To another year of growing, laughing, making questionable
+                decisions, and creating memories that we'll probably laugh
+                about years from now.
+            </p>
+
+            <p>
+                Happy birthday, Ysabelle.
+                I'm genuinely wishing you the happiest year ahead.
+            </p>
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <div class="signature">
+                — Hubert
+            </div>
+
+            <button class="next-btn"
+                    onclick="scrollToSection('final')">
+
+                one last thing...
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL -->
+
+    <section id="final">
+
+        <div class="final">
+
+            <div class="small">
+                And finally...
+            </div>
+
+            <h1>
+                Happy 14th,<br>
+                Dragon. ♡
+            </h1>
+
+            <p>
+                May 14 be a year you'll never forget.
+                Stay happy, stay weird, stay you.
+            </p>
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <p style="font-size:14px;">
+                P.S. libre nimo Monday. 😭
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- YOUTUBE PLAYER -->
+
+<div id="youtubePlayer"
+     style="position:fixed;left:-10000px;top:-10000px;">
+</div>
+
+<script>
+
+/* OPEN WEBSITE */
+
+function openBirthday() {
+
+    const opening = document.getElementById("opening");
+    const main = document.getElementById("main");
+
+    opening.style.opacity = "0";
+
+    setTimeout(() => {
+
+        opening.style.display = "none";
+
+        main.style.display = "block";
+
+        createConfetti();
+
+        createYouTubePlayer();
+
+    }, 1000);
+
+}
+
+/* SCROLL */
+
+function scrollToSection(id) {
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+/* CONFETTI */
+
+function createConfetti() {
+
+    const symbols = [
+        "🌸",
+        "♡",
+        "✦",
+        "•",
+        "🌷"
+    ];
+
+    for(let i = 0; i < 35; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+        piece.style.fontSize =
+            (10 + Math.random() * 15) + "px";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 6000);
+
+    }
+
+}
+
+/* YOUTUBE */
+
+function createYouTubePlayer() {
+
+    const script =
+        document.createElement("script");
+
+    script.src =
+        "https://www.youtube.com/iframe_api";
+
+    document.body.appendChild(script);
+
+}
+
+/* YOUTUBE API */
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+
+    player = new YT.Player(
+        "youtubePlayer",
+        {
+
+            height: "1",
+
+            width: "1",
+
+            videoId: "sDxRErGKx0U",
+
+            playerVars: {
+
+                autoplay: 1,
+
+                loop: 1,
+
+                playlist: "sDxRErGKx0U"
+
+            },
+
+            events: {
+
+                onReady: function(event) {
+
+                    event.target.playVideo();
+
+                    event.target.setVolume(35);
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
